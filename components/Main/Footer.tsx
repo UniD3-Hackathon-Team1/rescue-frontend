@@ -13,7 +13,7 @@ const footerLink = [
     <path d="M5 9m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
     <path d="M19 9m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
           </svg>,
-    link: '/',
+    link: '/leaderboard',
   },
   {
     title: '캐릭터',
@@ -21,7 +21,7 @@ const footerLink = [
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
     <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
           </svg>,
-    link: '/',
+    link: '/char',
   },
   {
     title: '퀘스트',
