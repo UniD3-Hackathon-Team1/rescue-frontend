@@ -1,3 +1,6 @@
+"use client";
+import React, {useState} from 'react';
+
 const dummyData = [
   {
     title: '소화기, 비상등, 비상손전등 상태 확인',
@@ -25,8 +28,13 @@ const dummyData = [
   },
 ];
 
-function EachQuest({ idx }: { idx: number }) {
+function EachQuest({ idx, onComplete }: { idx: number, onComplete: (index: number)=>void}) {
   const info = dummyData[idx];
+
+  const handleCompleteClick = () => {
+    onComplete(idx);
+  };
+ 
   return (
     <div className="collapse w-full rounded-none">
       <input type="checkbox" />
@@ -45,7 +53,7 @@ function EachQuest({ idx }: { idx: number }) {
             ) : (
               <div className="join">
                 <button className="btn btn-secondary text-white join-item" type="button">포기</button>
-                <button className="btn btn-primary join-item" type="button">완료</button>
+                <button className="btn btn-primary join-item" type="button" onClick={handleCompleteClick}>완료</button>
               </div>
             )
           }
@@ -56,13 +64,21 @@ function EachQuest({ idx }: { idx: number }) {
 }
 
 export function QuestAccor() {
+  const [quests, setQuests] = useState(dummyData);
+
+  const handleCompleteQuest = (index: number) => {
+    const updatedQuests = [...quests];
+    updatedQuests[index].isFinish = true;
+    setQuests(updatedQuests);
+  };
+
   return (
     <div className="w-full border border-gray-300 rounded-lg divide-y mt-4 overflow-hidden">
       <div className="w-full h-14 text-2xl flex items-center justify-center font-bold bg-primary text-white">
         오늘의 퀘스트 목록
       </div>
       {
-        dummyData.map((_, i) => (<EachQuest idx={i} />))
+        dummyData.map((_, i) => (<EachQuest key={i} idx={i} onComplete={handleCompleteQuest}/>))
       }
       <div className="w-full py-3 flex items-center justify-center">
         <button type="button" className="btn btn-primary">+ 추가하기</button>

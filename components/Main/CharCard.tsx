@@ -44,7 +44,7 @@ export function CharCard() {
     //   </Group>
     // </Card>
     <div className="card card-compact w-full bg-base-100 border-gray-300 border rounded-lg">
-      <figure className=" relative w-full aspect-square"><Image src="/newCharacter.png" alt="Shoes" objectFit="cover" layout="fill" /></figure>
+      <figure className=" relative w-full aspect-square"><Image src="/smallCharacter.png" alt="Shoes" objectFit="cover" layout="fill" /></figure>
       <div className="card-body">
         <h2 className="card-title">ㅇㅇㅇ님 환영합니다!</h2>
         <p>22세, 학생, 서울시 용산구, </p>

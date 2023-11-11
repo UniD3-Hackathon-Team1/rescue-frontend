@@ -125,7 +125,6 @@ export function Result() {
             )
           }
         </div>
-        <Button className={classes.button} onClick={function() {router.push("../main")}}>메인으로</Button>
       </div>
     </Center>
   );
