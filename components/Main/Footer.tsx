@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from '@/components/Main/Footer.module.css';
 
 const footerLink = [
@@ -28,7 +29,7 @@ const footerLink = [
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
     <path d="M5 14h14l-4.5 -4.5l4.5 -4.5h-14v16" />
           </svg>,
-    link: '/',
+    link: '/result',
   },
   {
     title: '신고함',
@@ -57,12 +58,14 @@ export function Footer() {
     <div className="w-full border border-gray-300 rounded-lg divide-x flex flex-row mt-10">
       {
         footerLink.map((t) => (
-          <button type="button" key={t.title} className={`w-1/5 p-2 aspect-square flex flex-col items-center justify-between hover:bg-[#00000010] ${styles.EachButton}`}>
-            <div className="h-[calc(100%-24px)] w-[90%]">
-              {t.icon}
-            </div>
-            <div className=" text-gray-700 text-sm mt-1 font-bold">{t.title}</div>
-          </button>
+          <Link href={t.link} className="w-1/5 aspect-square">
+            <button type="button" key={t.title} className={`w-full p-2 aspect-square flex flex-col items-center justify-between hover:bg-[#00000010] ${styles.EachButton}`}>
+              <div className="h-[calc(100%-24px)] w-[90%]">
+                {t.icon}
+              </div>
+              <div className=" text-gray-700 text-sm mt-1 font-bold">{t.title}</div>
+            </button>
+          </Link>
         ))
       }
     </div>
