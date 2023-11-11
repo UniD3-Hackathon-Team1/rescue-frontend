@@ -1,6 +1,7 @@
 import { Center, Container, Flex } from '@mantine/core';
-import Image from 'next/image';
 import { GPCard } from './GPCard';
+import { CharCard } from './CharCard';
+import { QuestAccor } from './QuestAccor';
 
 export default function Main() {
   return (
@@ -8,16 +9,14 @@ export default function Main() {
       <Center w="100vw" mt={20}>
         <Container px={10} w="100%" maw="520px">
           <Flex direction="column" gap="lg" align="center" w="100%">
-            <div style={{
-              width: '100%',
-              height: '200px',
-              position: 'relative',
-            }}
-            >
-              <Image objectFit="contain" fill src="/char.jpeg" alt="캐릭터 이미지" />
-            </div>
+            <Container w="100%">
+              <CharCard />
+            </Container>
             <Container fluid w="100%">
               <GPCard />
+            </Container>
+            <Container fluid w="100%">
+              <QuestAccor />
             </Container>
           </Flex>
         </Container>
