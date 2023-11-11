@@ -9,7 +9,25 @@ const data1 = [
     {
         id: '1',
         context: '기본 자기 방어(호신술) 기술 학습',
-        period: '1주일',
+        period: '일주일',
+        score: '20',
+    },
+    {
+        id: '2',
+        context: '호신 용품 휴대',
+        period: '매일',
+        score: '20',
+    },
+    {
+        id: '3',
+        context: '비상 상황 시 대피 루트 및 비상 연락망 숙지',
+        period: '1년',
+        score: '20',
+    },
+    {
+        id: '4',
+        context: '개인 비상용 키트(호루라기, 손전등, 소형 약품) 구비',
+        period: '1년',
         score: '20',
     },
 ];
@@ -21,6 +39,36 @@ const data2 = [
         period: '매일',
         score: '20',
     },
+    {
+        id: '2',
+        context: '적정 수분 섭취',
+        period: '매일',
+        score: '20',
+    },
+    {
+        id: '3',
+        context: '규칙적인 운동하기',
+        period: '매일',
+        score: '20',
+    },
+    {
+        id: '4',
+        context: '충분한 수면 취하기',
+        period: '매일',
+        score: '20',
+    },
+    {
+        id: '5',
+        context: '스트레스 관리하기',
+        period: '일주일',
+        score: '20',
+    },
+    {
+        id: '6',
+        context: '건강 검진 및 필요한 예방 접종 받기',
+        period: '1년',
+        score: '20',
+    },
 ];
 
 const data3 = [
@@ -28,6 +76,18 @@ const data3 = [
         id: '1',
         context: '비밀번호 주기적인 변경',
         period: '1년',
+        score: '20',
+    },
+    {
+        id: '2',
+        context: '피싱 및 사기 이메일 인식 및 대처법 숙지',
+        period: '1년',
+        score: '20',
+    },
+{
+        id: '3',
+        context: '중요한 개인 정보의 안전한 저장 및 관리',
+        period: '1달',
         score: '20',
     },
 ];
