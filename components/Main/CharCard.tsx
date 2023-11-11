@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function CharCard() {
   // const { title, description, country, badges } = mockdata;
@@ -47,7 +48,7 @@ export function CharCard() {
         <h2 className="card-title">ㅇㅇㅇ님 환영합니다!</h2>
         <p>대충 설명이 들어갈 자리</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary" type="button">캐릭터 관리</button>
+          <Link href="/char"><button className="btn btn-primary" type="button">캐릭터 관리</button></Link>
         </div>
       </div>
     </div>
