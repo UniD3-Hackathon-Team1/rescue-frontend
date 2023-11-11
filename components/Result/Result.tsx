@@ -4,8 +4,8 @@ import { Center, Button } from '@mantine/core';
 import { Calendar } from '@mantine/dates';
 import { useEffect, useState } from 'react';
 
-import classes from "./Result.module.css";
-import {useRouter} from "next/navigation";
+import { useRouter } from 'next/navigation';
+import classes from './Result.module.css';
 
 export const isSameDate = (a: Date, b: Date) => (
     a.getDate() === b.getDate() &&

@@ -46,12 +46,12 @@ export default function Category() {
     };
 
     return (
-        <>
+        <div className="w-full flex flex-col">
             <Topper hideProfile title="퀘스트 선택" />
             <Frame>
                 {renderActiveTable()}
                 <Button onClick={handleButtonClick} style={buttonstyles}>다음</Button>
             </Frame>
-        </>
+        </div>
     );
 }
