@@ -1,13 +1,11 @@
-import { Welcome } from '../components/Welcome/Welcome';
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
 import Link from 'next/link';
-import { Title, Text, Anchor } from '@mantine/core';
+import { Text } from '@mantine/core';
+import Main from '@/components/Main/Main';
 
 export default function HomePage() {
   return (
     <>
-      <Welcome />
-      <ColorSchemeToggle />
+      <Main />
       <Link href="../login">
         <Text>login</Text>
       </Link>
