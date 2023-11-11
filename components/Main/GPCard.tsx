@@ -13,7 +13,7 @@ export function GPCard() {
         GP 현황
       </Text>
       <Text c="dimmed" ta="center" fz="sm">
-        ㅇㅇ시
+        서울시 용산구
       </Text>
 
       <Group justify="space-between" mt="xs">

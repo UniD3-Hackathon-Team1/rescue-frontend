@@ -1,6 +1,6 @@
 .container {
     width: 100%;
-    max-width: 520px;
+    max-width: 370px;
 }
 
 .header {
@@ -8,7 +8,6 @@
     top: 0;
     background-color: var(--mantine-color-body);
     transition: box-shadow 150ms ease;
-    max-width: 520px;
 
     &::after {
         content: '';

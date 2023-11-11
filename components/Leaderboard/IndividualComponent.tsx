@@ -1,20 +1,26 @@
 "use client"; // this is a client component
 import classes from './RegionalComponent.module.css';
-import {Text} from "@mantine/core";
 import {useState} from 'react';
 import cx from 'clsx';
 import { Table, ScrollArea } from '@mantine/core';
+import individual from './src/individual.png';
+import Image from 'next/image';
 
 const data = [
     {
         rank: '1',
-        name: '감자',
-        score: '2300',
+        name: 'ㅇㅇㅇ',
+        score: '23000',
     },
     {
         rank: '2',
-        name: '채린',
-        score: '2000',
+        name: 'ㅁㅁㅁ',
+        score: '20000',
+    },
+    {
+        rank: '3',
+        name: 'ㅂㅂㅂ',
+        score: '18000',
     }
   ];
 
@@ -33,9 +39,9 @@ export function IndividualComponent() {
 
     return (
         <div className={classes.container}><br/>
-        <Text ta={"center"} fw={"bold"}>회원님의 지역에서의 랭킹입니다.</Text><br/>
+        <Image src={individual} alt="individual"/>
         <ScrollArea h={300} onScrollPositionChange={({ y }) => setScrolled(y !== 0)}>
-        <Table miw={520}>
+        <Table miw={200}>
             <Table.Thead className={cx(classes.header, { [classes.scrolled]: scrolled })}>
                 <Table.Tr>
                     <Table.Th>닉네임</Table.Th>
