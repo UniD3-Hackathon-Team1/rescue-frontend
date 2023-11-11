@@ -10,7 +10,7 @@ export function Char() {
             캐릭터 커스터마이징
           </div>
           <div className="w-full aspect-[3/4] relative">
-            <Image src="/fullBefore.png" alt="캐릭터" objectFit="contain" fill />
+            <Image src="/smallCharacter.png" alt="캐릭터" objectFit="contain" fill />
           </div>
           <div className="w-full py-3 flex items-center justify-center">
             <div className="join">
@@ -22,10 +22,10 @@ export function Char() {
           </div>
           <div className="w-full p-3 flex flex-row justify-around">
             <div className="w-[35%] aspect-square relative border-4 border-primary rounded-lg overflow-hidden">
-              <Image src="/wear1.png" alt="캐릭터" objectFit="contain" fill />
+              <Image src="/cloth1.png" alt="캐릭터" objectFit="contain" fill />
             </div>
             <div className="w-[35%] aspect-square relative border-4 border-gray-300 rounded-lg overflow-hidden">
-              <Image src="/wear2.png" alt="캐릭터" objectFit="contain" fill />
+              <Image src="/cloth2.png" alt="캐릭터" objectFit="contain" fill />
             </div>
           </div>
           <div className="btn btn-primary btn-lg flex w-full p-3 items-center justify-center rounded-t-none">

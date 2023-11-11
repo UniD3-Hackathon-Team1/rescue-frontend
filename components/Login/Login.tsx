@@ -63,10 +63,10 @@ export function LoginComponent() {
                     </Button>
                 </Group>
                 <div className="flex flex-row divide-x divide-gray-300 mt-8">
-                    <Link href="/login" className="px-3">
+                    <Link href="/" className="px-3">
                         <Text className={classes.subText}>아이디 찾기</Text>
                     </Link>
-                    <Link href="/login" className="px-3">
+                    <Link href="/" className="px-3">
                         <Text className={classes.subText}>비밀번호 찾기</Text>
                     </Link>
                     <Link href="/join" className="px-3">
