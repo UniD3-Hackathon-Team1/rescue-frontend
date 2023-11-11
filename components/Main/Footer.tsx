@@ -24,6 +24,16 @@ const footerLink = [
     link: '/char',
   },
   {
+    title: '홈',
+    icon: <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+          </svg>,
+    link: '/main',
+  },
+  {
     title: '퀘스트',
     icon: <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-flag-3" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -41,33 +51,27 @@ const footerLink = [
           </svg>,
     link: '/main',
   },
-  {
-    title: '프로필',
-    icon: <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-user-circle" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-    <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-    <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
-          </svg>,
-    link: '/profile',
-  },
 ];
 
 export function Footer() {
   return (
-    <div className="w-full border border-gray-300 rounded-lg divide-x flex flex-row mt-10">
-      {
-        footerLink.map((t) => (
-          <Link href={t.link} className="w-1/5 aspect-square">
-            <button type="button" key={t.title} className={`w-full p-2 aspect-square flex flex-col items-center justify-between hover:bg-[#00000010] ${styles.EachButton}`}>
-              <div className="h-[calc(100%-24px)] w-[90%]">
-                {t.icon}
-              </div>
-              <div className=" text-gray-700 text-sm mt-1 font-bold">{t.title}</div>
-            </button>
-          </Link>
-        ))
-      }
+    <div className="w-screen flex justify-center items-center mt-5 pb-20">
+      <div className="w-full max-w-[520px] px-3">
+        <div className="w-full border border-gray-300 rounded-lg divide-x flex flex-row mt-10">
+          {
+            footerLink.map((t) => (
+              <Link href={t.link} className="w-1/5 aspect-square">
+                <button type="button" key={t.title} className={`w-full p-2 aspect-square flex flex-col items-center justify-between hover:bg-[#00000010] ${styles.EachButton}`}>
+                  <div className="h-[calc(100%-24px)] w-[90%]">
+                    {t.icon}
+                  </div>
+                  <div className=" text-gray-700 text-sm mt-1 font-bold">{t.title}</div>
+                </button>
+              </Link>
+            ))
+          }
+        </div>
+      </div>
     </div>
   );
 }

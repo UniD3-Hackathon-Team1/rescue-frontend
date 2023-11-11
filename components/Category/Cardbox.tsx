@@ -11,15 +11,6 @@ export function Cardbox({text}: CardboxProps) {
 
   return (
     <UnstyledButton onClick={() => onChange(!value)} className={classes.button}>
-      <Checkbox
-        checked={value}
-        onChange={() => {}}
-        tabIndex={-1}
-        size="md"
-        mr="l"
-        styles={{ input: { cursor: 'pointer' } }}
-        aria-hidden
-      />
       <div>
         <Text fw={500} ml={10}>
           {text}

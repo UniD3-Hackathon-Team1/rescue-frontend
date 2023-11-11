@@ -1,5 +1,5 @@
 .emailInput {
-    width: 400px;
+    width: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -8,14 +8,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    max-width: 520px;
-    margin: 0 auto;
-    margin-top: -50px;
+    width: 100%;
 }
 
 .pwInput {
-    width: 400px;
+    width: 100%;
 }
 
 .pwText {
@@ -23,5 +20,33 @@
 }
 
 .button {
-    background-color: black;
+    background-color: rgb(46, 117, 242);
+}
+
+.titleText {
+    font-family: 'Inika';
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: left;
+}
+
+.box {
+    width: 100%;
+    border: solid rgba(46, 117, 242, 0.45) 3px;
+    border-radius: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subText {
+    opacity: 0.5;
+}
+
+.titleContainer {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 400px;
 }
