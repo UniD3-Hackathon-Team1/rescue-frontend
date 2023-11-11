@@ -36,7 +36,7 @@ export function LeaderboardComponent() {
         onChange={handleOptionChange}
         />
         {renderContent()}<br/>
-        <Button className={classes.button} onClick={function() {router.push("../")}}>메인으로</Button>
+        <Button className={classes.button} onClick={function() {router.push("../main")}}>메인으로</Button>
         </div>
     );
 }

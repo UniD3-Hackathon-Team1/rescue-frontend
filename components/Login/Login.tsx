@@ -50,7 +50,7 @@ export function LoginComponent() {
                 />
                 <PasswordInput id="your-password" className={classes.pwInput} placeholder="비밀번호" />
                 <Group justify="center" mt={50}>
-                    <Button className={classes.button} onClick={function () { router.push('../'); }}>
+                    <Button className={classes.button} onClick={function () { router.push('../main'); }}>
                         로그인
                     </Button>
                 </Group>

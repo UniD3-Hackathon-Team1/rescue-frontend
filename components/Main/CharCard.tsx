@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import {Group} from '@mantine/core';
 
 export function CharCard() {
   // const { title, description, country, badges } = mockdata;
@@ -43,12 +44,15 @@ export function CharCard() {
     //   </Group>
     // </Card>
     <div className="card card-compact w-full bg-base-100 border-gray-300 border rounded-lg">
-      <figure className=" relative w-full aspect-square"><Image src="/char.png" alt="Shoes" objectFit="cover" layout="fill" /></figure>
+      <figure className=" relative w-full aspect-square"><Image src="/newCharacter.png" alt="Shoes" objectFit="cover" layout="fill" /></figure>
       <div className="card-body">
         <h2 className="card-title">ㅇㅇㅇ님 환영합니다!</h2>
-        <p>대충 설명이 들어갈 자리</p>
+        <p>22세, 학생, 서울시 용산구, </p>
         <div className="card-actions justify-end">
-          <Link href="/char"><button className="btn btn-primary" type="button">캐릭터 관리</button></Link>
+          <Group>
+            <Link href="/char"><button className="btn btn-primary" type="button">캐릭터 관리</button></Link>
+            <Link href="/share"><Image src="/share.png" alt="Shoes" width={50} height={50} /></Link>
+          </Group>
         </div>
       </div>
     </div>

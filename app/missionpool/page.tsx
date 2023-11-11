@@ -35,7 +35,7 @@ export default function Category() {
         }
         if (activeTable >= 4) {
             alert('회원가입이 완료되었습니다!');
-            router.push('../login');
+            router.push('../');
         }
     };
 

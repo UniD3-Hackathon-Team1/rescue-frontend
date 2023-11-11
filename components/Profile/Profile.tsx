@@ -31,7 +31,7 @@ export function ProfileComponent() {
             label="직업"
             classNames={classes}
             />
-            <Button onClick={function() {router.push("/")}} className={classes.button}>
+            <Button onClick={function() {router.push("../main")}} className={classes.button}>
                 메인
             </Button>
         </div>

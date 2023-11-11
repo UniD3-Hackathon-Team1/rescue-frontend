@@ -31,7 +31,7 @@ const footerLink = [
     <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
     <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
           </svg>,
-    link: '/',
+    link: '/main',
   },
   {
     title: '퀘스트',
@@ -49,7 +49,7 @@ const footerLink = [
     <path d="M12 8l0 3" />
     <path d="M12 14l0 .01" />
           </svg>,
-    link: '/',
+    link: '/main',
   },
 ];
 
