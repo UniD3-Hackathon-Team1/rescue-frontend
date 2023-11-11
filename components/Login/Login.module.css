@@ -1,5 +1,5 @@
 .emailInput {
-    width: 400px;
+    width: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -8,14 +8,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    max-width: 200px;
-    margin: 0 auto;
-    margin-top: -50px;
+    width: 100%;
 }
 
 .pwInput {
-    width: 400px;
+    width: 100%;
 }
 
 .pwText {
@@ -35,9 +32,13 @@
 }
 
 .box {
+    width: 100%;
     border: solid rgba(46, 117, 242, 0.45) 3px;
     border-radius: 30px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .subText {

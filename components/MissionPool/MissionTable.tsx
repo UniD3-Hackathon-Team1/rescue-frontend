@@ -1,6 +1,6 @@
 import cx from 'clsx';
 import { useState } from 'react';
-import { Table, Checkbox, ScrollArea, Group, Avatar, Text, rem } from '@mantine/core';
+import { Table, Checkbox, ScrollArea, rem } from '@mantine/core';
 import classes from './MissionTable.module.css';
 
 interface catData {
@@ -8,13 +8,13 @@ interface catData {
     context: string;
     period: string;
     score: string;
-};
+}
 
 interface MissionTableProps {
     data: catData[];
 }
 
-export function MissionTable({data}: MissionTableProps) {
+export function MissionTable({ data }: MissionTableProps) {
   const [selection, setSelection] = useState(['1']);
   const toggleRow = (id: string) =>
     setSelection((current) =>
@@ -38,8 +38,8 @@ export function MissionTable({data}: MissionTableProps) {
   });
 
   return (
-    <ScrollArea>
-      <Table miw={800} verticalSpacing="sm" mt={10}>
+    <ScrollArea w="100%">
+      <Table w="100%" miw="100%" verticalSpacing="sm" mt={10}>
         <Table.Thead>
           <Table.Tr>
             <Table.Th style={{ width: rem(40) }}>
@@ -50,8 +50,8 @@ export function MissionTable({data}: MissionTableProps) {
               />
             </Table.Th>
             <Table.Th>내용</Table.Th>
-            <Table.Th>주기</Table.Th>
-            <Table.Th>GP</Table.Th>
+            <Table.Th className="whitespace-nowrap">주기</Table.Th>
+            <Table.Th className="whitespace-nowrap">GP</Table.Th>
           </Table.Tr>
         </Table.Thead>
         <Table.Tbody>{rows}</Table.Tbody>

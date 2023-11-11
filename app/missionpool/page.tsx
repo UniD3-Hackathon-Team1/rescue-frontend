@@ -9,6 +9,7 @@ import { MissionPoolComponent2 } from '../../components/MissionPool/MissionPool2
 import { MissionPoolComponent3 } from '../../components/MissionPool/MissionPool3';
 import { MissionPoolComponent4 } from '../../components/MissionPool/MissionPool4';
 import Topper from '@/components/Main/Topper';
+import { Frame } from '@/components/Frame';
 
 export default function Category() {
     const router = useRouter();
@@ -41,17 +42,16 @@ export default function Category() {
     const buttonstyles = {
         backgroundColor: 'black',
         color: 'white',
-        marginLeft: '700px',
-        marginTop: '30px',
+        marginTop: '20px',
     };
 
     return (
         <>
             <Topper hideProfile title="퀘스트 선택" />
-            <div>
+            <Frame>
                 {renderActiveTable()}
                 <Button onClick={handleButtonClick} style={buttonstyles}>다음</Button>
-            </div>
+            </Frame>
         </>
     );
 }
