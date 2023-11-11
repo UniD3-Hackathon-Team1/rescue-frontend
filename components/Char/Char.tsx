@@ -1,5 +1,6 @@
 import { Center } from '@mantine/core';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function Char() {
   return (
@@ -27,6 +28,9 @@ export function Char() {
             <div className="w-[35%] aspect-square relative border-4 border-gray-300 rounded-lg overflow-hidden">
               <Image src="/wear2.png" alt="캐릭터" objectFit="contain" fill />
             </div>
+          </div>
+          <div className="btn btn-primary btn-lg flex w-full p-3 items-center justify-center rounded-t-none">
+            상의 더 구매하러 가기
           </div>
         </div>
       </div>
