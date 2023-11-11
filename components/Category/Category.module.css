@@ -1,9 +1,3 @@
-.emailInput {
-    width: 400px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
 .container {
     display: flex;
     flex-direction: column;
@@ -14,14 +8,18 @@
     margin-top: -50px;
 }
 
-.pwInput {
-    width: 400px;
+.subtitle {
+    font-weight: bold;
+    margin-top: 50px;
+    font-size: 25px;
 }
 
-.pwText {
-    text-align: left;
+.divider {
+    width: 510px;
+    margin-top: 50px;
 }
 
 .button {
     background-color: black;
+    margin-top: 50px;
 }
