@@ -1,8 +1,11 @@
 'use client';
 
-import { Center } from '@mantine/core';
+import { Center, Button } from '@mantine/core';
 import { Calendar } from '@mantine/dates';
 import { useEffect, useState } from 'react';
+
+import classes from "./Result.module.css";
+import {useRouter} from "next/navigation";
 
 export const isSameDate = (a: Date, b: Date) => (
     a.getDate() === b.getDate() &&
@@ -12,26 +15,26 @@ export const isSameDate = (a: Date, b: Date) => (
 
 const dummyData = [
   {
-    title: '어쩌구 저쩌구 ㅁㄴㅇㄹ 하기1',
-    content: '대충 이 퀘스트에 대한 설명이 들어가야 할듯?',
+    title: '소화기, 비상등, 비상손전등 상태 확인',
+    content: '가정의 소화기, 비상등, 비상손전등의 상태를 확인하세요.',
     id: 1,
     isFinish: false,
   },
   {
-    title: '어쩌구 저쩌구 ㅁㄴㅇㄹ 하기2',
-    content: '대충 이 퀘스트에 대한 설명이 들어가야 할듯?',
+    title: '호신 용품 휴대',
+    content: '후추 스프레이 등의 호신 용품을 항상 가지고 다니세요.',
     id: 2,
     isFinish: false,
   },
   {
-    title: '어쩌구 저쩌구 ㅁㄴㅇㄹ 하기3',
-    content: '대충 이 퀘스트에 대한 설명이 들어가야 할듯?',
+    title: '날씨 및 경로 사전 점검하기',
+    content: '여행 중이시라면, 도착지의 날씨 및 경로를 미리 확인하고 출발하세요.',
     id: 3,
     isFinish: true,
   },
   {
-    title: '어쩌구 저쩌구 ㅁㄴㅇㄹ 하기4',
-    content: '대충 이 퀘스트에 대한 설명이 들어가야 할듯?',
+    title: '비상 대피 경로 확인하기',
+    content: '직장의 비상 대피 경로를 확인하고 숙지하세요.',
     id: 4,
     isFinish: false,
   },
@@ -77,6 +80,7 @@ function EachNowQuest({ idx, isToday }: { idx: number, isToday: boolean }) {
 
 export function Result() {
   const [Selected, setSelected] = useState<Date>(new Date());
+  const router = useRouter();
   useEffect(() => {
     setSelected(new Date());
   }, []);
@@ -121,6 +125,7 @@ export function Result() {
             )
           }
         </div>
+        <Button className={classes.button} onClick={function() {router.push("../main")}}>메인으로</Button>
       </div>
     </Center>
   );

@@ -39,7 +39,7 @@ const footerLink = [
     <path d="M12 8l0 3" />
     <path d="M12 14l0 .01" />
           </svg>,
-    link: '/',
+    link: '/main',
   },
   {
     title: '프로필',
