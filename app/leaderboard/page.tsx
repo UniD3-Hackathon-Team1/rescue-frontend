@@ -1,11 +1,13 @@
 import { LeaderboardComponent } from '@/components/Leaderboard/Leaderboard';
 import Footer from '@/components/Main/Footer';
+import Topper from '@/components/Main/Topper';
 
 export default function Leaderboard() {
     return (
         <div>
-            <LeaderboardComponent/>
+            <Topper title="랭킹" />
+            <LeaderboardComponent />
             <Footer />
         </div>
-    )
+    );
 }
