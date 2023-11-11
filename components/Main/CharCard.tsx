@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import {Group} from '@mantine/core';
+import { Group } from '@mantine/core';
 
 export function CharCard() {
   // const { title, description, country, badges } = mockdata;
