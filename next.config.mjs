@@ -12,4 +12,12 @@ export default withBundleAnalyzer({
   experimental: {
     optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: `http://ec2-54-180-202-159.ap-northeast-2.compute.amazonaws.com:3000/:path*`
+      }
+    ]
+  }
 });
