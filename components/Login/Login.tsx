@@ -2,7 +2,7 @@
 import { Title, Text, Autocomplete, Loader, PasswordInput, Group, Anchor, Button} from '@mantine/core';
 import { useState, useRef } from 'react';
 import classes from './Login.module.css';
-import {usePathname, useRouter} from 'next/navigation';
+import {useRouter} from 'next/navigation';
 
 export function LoginComponent() {
     const timeoutRef = useRef<number>(-1);
@@ -44,10 +44,10 @@ export function LoginComponent() {
             />
             <PasswordInput id="your-password" className={classes.pwInput} label="비밀번호"/>
             <Group justify='center' mt={50}>
-                <Button>
+                <Button className={classes.button}>
                     로그인
                 </Button>
-                <Button onClick={function() {router.push("../join")}}>
+                <Button onClick={function() {router.push("../join")}} className={classes.button}>
                     회원가입
                 </Button>
             </Group>
