@@ -12,6 +12,30 @@ const data1 = [
         period: '매일',
         score: '20',
     },
+    {
+        id: '2',
+        context: '전기 안전 점검 하기',
+        period: '일주일',
+        score: '20',
+    },
+    {
+        id: '3',
+        context: '비상 대피 경로 확인하기',
+        period: '1년',
+        score: '20',
+    },
+    {
+        id: '4',
+        context: '소화기 및 비상 물품 확인하기',
+        period: '1달',
+        score: '20',
+    },
+    {
+        id: '5',
+        context: '응급 처치 교육하기',
+        period: '1년',
+        score: '20',
+    },
 ];
 
 const data2 = [
@@ -21,12 +45,42 @@ const data2 = [
         period: '매일',
         score: '20',
     },
+    {
+        id: '2',
+        context: '명상 및 요가 실천하기',
+        period: '일주일',
+        score: '20',
+    },
+    {
+        id: '3',
+        context: '일과 중 짧은 휴식 시간 갖기',
+        period: '매일',
+        score: '20',
+    },
+    {
+        id: '4',
+        context: '동료와의 긍정적인 소통하기',
+        period: '일주일',
+        score: '20',
+    },
 ];
 
 const data3 = [
     {
         id: '1',
         context: '온라인 규정 준수 교육 완료하기',
+        period: '1년',
+        score: '20',
+    },
+    {
+        id: '1',
+        context: '작업장 위험 평가 참여하기',
+        period: '1달',
+        score: '20',
+    },
+    {
+        id: '1',
+        context: '최신 법률 및 규정 정보 업데이트 받기',
         period: '1년',
         score: '20',
     },

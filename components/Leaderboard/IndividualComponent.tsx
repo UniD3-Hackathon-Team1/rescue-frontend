@@ -9,18 +9,18 @@ import Image from 'next/image';
 const data = [
     {
         rank: '1',
-        name: 'ㅇㅇㅇ',
-        score: '23000',
+        name: '김사람',
+        score: '6200',
     },
     {
         rank: '2',
-        name: 'ㅁㅁㅁ',
-        score: '20000',
+        name: '이사람',
+        score: '6100',
     },
     {
         rank: '3',
-        name: 'ㅂㅂㅂ',
-        score: '18000',
+        name: '박사람',
+        score: '6000',
     }
   ];
 
