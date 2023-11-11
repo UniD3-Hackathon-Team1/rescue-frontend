@@ -1,8 +1,9 @@
 import { ProfileComponent } from '../../components/Profile/Profile';
+
 export default function Join() {
   return (
-    <>
-      <ProfileComponent/>
-    </>
+    <div className="w-full flex flex-col">
+      <ProfileComponent />
+    </div>
   );
 }

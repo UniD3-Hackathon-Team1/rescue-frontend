@@ -1,42 +1,40 @@
-"use client"; // this is a client component
-import { Title, Text, Button, SegmentedControl} from '@mantine/core';
-import classes from './Leaderboard.module.css';
-import {useRouter} from 'next/navigation';
-import {useState} from 'react';
-import { RegionalComponent} from './RegionalComponent';
-import { IndividualComponent } from './IndividualComponent';
+'use client';
 
-type SegmentOption = "지역별" | "개인별";
+ // this is a client component
+import { Title, Button, SegmentedControl } from '@mantine/core';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import classes from './Leaderboard.module.css';
+import { RegionalComponent } from './RegionalComponent';
+import { IndividualComponent } from './IndividualComponent';
 
 export function LeaderboardComponent() {
     const router = useRouter();
-    const [selectedOption, setSelectedOption] = useState("지역별");
+    const [selectedOption, setSelectedOption] = useState('지역별');
 
-    const handleOptionChange = (value: SegmentOption) => {
+    const handleOptionChange = (value: string) => {
         setSelectedOption(value);
     };
 
     const renderContent = () => {
-        if(selectedOption === "지역별") {
-            return <RegionalComponent/>
-        } else {
-            return <IndividualComponent/>
+        if (selectedOption === '지역별') {
+            return <RegionalComponent />;
         }
-    }
+            return <IndividualComponent />;
+    };
     return (
         <div className={classes.container}>
-        <Title className={classes.title} ta="center" mt={100}>
-        </Title>
+        <Title className={classes.title} ta="center" mt={100} />
         <SegmentedControl
-        radius="xl"
-        size="md"
-        data={['지역별', '개인별']}
-        classNames={classes}
-        value={selectedOption}
-        onChange={handleOptionChange}
+          radius="xl"
+          size="md"
+          data={['지역별', '개인별']}
+          classNames={classes}
+          value={selectedOption}
+          onChange={handleOptionChange}
         />
-        {renderContent()}<br/>
-        <Button className={classes.button} onClick={function() {router.push("../main")}}>메인으로</Button>
+        {renderContent()}<br />
+        <Button className={classes.button} onClick={function () { router.push('../main'); }}>메인으로</Button>
         </div>
     );
 }
