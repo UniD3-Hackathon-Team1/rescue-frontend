@@ -26,10 +26,7 @@ export function LeaderboardComponent() {
     return (
         <div className={classes.container}>
         <Title className={classes.title} ta="center" mt={100}>
-            <Text inherit variant="gradient" component="span" gradient={{ from: 'blue', to: 'black' }}>
-                랭킹
-            </Text>
-        </Title><br/>
+        </Title>
         <SegmentedControl
         radius="xl"
         size="md"
