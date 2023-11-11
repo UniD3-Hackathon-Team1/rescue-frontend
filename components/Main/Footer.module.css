@@ -1,0 +1,9 @@
+.EachButton {
+
+}
+
+.EachButton svg {
+  height: 100%;
+  width: 100%;
+  color: gray;
+}

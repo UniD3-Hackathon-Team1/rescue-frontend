@@ -30,10 +30,10 @@ function EachQuest({ idx }: { idx: number }) {
   return (
     <div className="collapse w-full rounded-none">
       <input type="checkbox" />
-      <div className="collapse-title text-xl font-medium">
-        <span className={`${info.isFinish && 'line-through'}`}>{info.title}</span>
+      <div className="collapse-title text-xl font-medium pr-4">
+        <span className={`${info.isFinish && 'line-through'}`}>{info.title}</span>{' '}
         {
-          info.isFinish ? (<div className="badge badge-primary ml-2 badge-lg">완료</div>) : (<div className="badge badge-default ml-2 badge-lg">진행중</div>)
+          info.isFinish ? (<div className="badge badge-primary badge-lg">완료</div>) : (<div className="badge badge-default badge-lg last">진행중</div>)
         }
       </div>
       <div className="collapse-content flex flex-col">
@@ -43,24 +43,30 @@ function EachQuest({ idx }: { idx: number }) {
             info.isFinish ? (
               <button className="btn btn-disabled" type="button">완료된 퀘스트</button>
             ) : (
-              <>
-                <button className="btn btn-error text-white" type="button">포기하기</button>
-                <button className="btn btn-primary" type="button">완료하기</button>
-              </>
+              <div className="join">
+                <button className="btn btn-secondary text-white join-item" type="button">포기</button>
+                <button className="btn btn-primary join-item" type="button">완료</button>
+              </div>
             )
           }
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export function QuestAccor() {
   return (
-    <div className="w-full border border-gray-300 rounded-lg divide-y mt-4">
+    <div className="w-full border border-gray-300 rounded-lg divide-y mt-4 overflow-hidden">
+      <div className="w-full h-14 text-2xl flex items-center justify-center font-bold bg-primary text-white">
+        오늘의 퀘스트 목록
+      </div>
       {
         dummyData.map((_, i) => (<EachQuest idx={i} />))
       }
+      <div className="w-full py-3 flex items-center justify-center">
+        <button type="button" className="btn btn-primary">+ 추가하기</button>
+      </div>
     </div>
   );
 }

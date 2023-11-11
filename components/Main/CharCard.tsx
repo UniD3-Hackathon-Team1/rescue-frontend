@@ -1,5 +1,4 @@
-import { Card, Image, Text, Group, CardSection } from '@mantine/core';
-import classes from './CharCard.module.css';
+import Image from 'next/image';
 
 export function CharCard() {
   // const { title, description, country, badges } = mockdata;
@@ -43,7 +42,7 @@ export function CharCard() {
     //   </Group>
     // </Card>
     <div className="card card-compact w-full bg-base-100 border-gray-300 border rounded-lg">
-      <figure><Image src="/char.jpeg" alt="Shoes" /></figure>
+      <figure className=" relative w-full aspect-square"><Image src="/char.png" alt="Shoes" objectFit="cover" layout="fill" /></figure>
       <div className="card-body">
         <h2 className="card-title">ㅇㅇㅇ님 환영합니다!</h2>
         <p>대충 설명이 들어갈 자리</p>
