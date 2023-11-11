@@ -1,6 +1,7 @@
 .button {
     display: flex;
-    width: 250px;
+    width: 100px;
+    height: 100px;
     border: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-8));
     border-radius: var(--mantine-radius-sm);
     padding: var(--mantine-spacing-lg);

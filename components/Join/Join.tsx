@@ -8,32 +8,45 @@ export function JoinComponent() {
     const router = useRouter();
 
     return (
-        <div className={classes.container}>
-            <Title className={classes.title} ta="center" mt={100}>
-                <Text inherit variant="gradient" component="span" gradient={{ from: 'blue', to: 'black' }}>
-                    회원가입
-                </Text>
-            </Title>
-            <TextInput label="아이디" required mt="md" autoComplete="nope" className={classes.textInput}/>
-            <TextInput label="비밀번호" required mt="md" autoComplete="nope" className={classes.textInput}/>
-            <TextInput label="닉네임" required mt="md" autoComplete="nope" className={classes.textInput}/>
-            <TextInput label="전화번호" required mt="md" autoComplete="nope" className={classes.textInput}/>
-            <TextInput label="지역" placeholder='00시 00구' required mt="md" autoComplete="nope" className={classes.textInput}/>
-            <TextInput label="나이" required mt="md" autoComplete="nope" className={classes.textInput}/>
-            <Select
-            mt="md"
-            required
-            comboboxProps={{ withinPortal: true }}
-            data={['학생', '취업준비생(무직)', '주부', '사무직원', '공장 노동자', 
-            '건설 현장 근로자', '고객 서비스 직원', '의료 종사자', '교사', '소매업 종사자', 
-            '식당 직원', 'IT 전문가', '프로그래머', '운전사', '항공 승무원', '화학 연구원', '변호사', '기계 엔지니어']}
-            placeholder="Pick one"
-            label="직업"
-            classNames={classes}
-            />
-            <Button onClick={function() {router.push("../category")}} className={classes.button}>
-                다음
-            </Button>
+        <div>
+            <div className={classes.titleContainer}>
+                <Title className={classes.title} ta="left" mt={100}>
+                    <Text className={classes.titleText} mb={50} ml={520}>
+                        Rescue
+                    </Text>
+                </Title>
+            </div>
+            <div className={classes.container}>
+                <div className={classes.upperContainer}>
+                    <TextInput placeholder="닉네임" autoComplete="nope" className={classes.textInput} size='md'/>
+                    <TextInput placeholder="생년월일"  autoComplete="nope" className={classes.textInput} size='md'/>
+                    <TextInput placeholder="전화번호" autoComplete="nope" className={classes.textInput} size='md'/>
+                    <Select
+                        size='md'
+                        comboboxProps={{ withinPortal: true }}
+                        data={['학생', '취업준비생(무직)', '주부', '사무직원', '공장 노동자', 
+                        '건설 현장 근로자', '고객 서비스 직원', '의료 종사자', '교사', '소매업 종사자', 
+                        '식당 직원', 'IT 전문가', '프로그래머', '운전사', '항공 승무원', '화학 연구원', '변호사', '기계 엔지니어']}
+                        placeholder="직업"
+                        classNames={classes}
+                    />
+                    <Select
+                        size='md'
+                        comboboxProps={{ withinPortal: true }}
+                        data={['강남구', '강동구', '강북구', '강서구', '관악구', '광진구', '구로구', '금천구', '노원구', '도봉구', '동대문구',
+                         '동작구', '마포구', '서대문구', '서초구', '성동구', '성북구', '송파구', '양천구', '영등포구', '용산구', '은평구', '종로구', '중구', '중랑구']}
+                        placeholder="지역"
+                        classNames={classes}
+                    />
+                </div><br/>
+                <div>
+                <TextInput placeholder="아이디" autoComplete="nope" className={classes.textInput} size='md'/>
+                <TextInput placeholder="비밀번호" autoComplete="nope" className={classes.textInput} size='md'/>
+                </div>
+                <Button onClick={function() {router.push("../category")}} className={classes.button}>
+                    다음
+                </Button>
+            </div>
         </div>
     );
 }

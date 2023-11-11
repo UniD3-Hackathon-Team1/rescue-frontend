@@ -20,6 +20,8 @@
 }
 
 .button {
-    background-color: black;
+    background-color: #2E75F2;
     margin-top: 50px;
+    width: 150px;
+    border-radius: 10px;
 }
