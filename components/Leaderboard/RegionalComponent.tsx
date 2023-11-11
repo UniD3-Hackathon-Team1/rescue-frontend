@@ -19,7 +19,7 @@ const data = [
     {
         rank: '3',
         region: '강남구',
-        score: '1800000,'
+        score: '180000'
     }
   ];
 
