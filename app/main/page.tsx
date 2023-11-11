@@ -1,8 +1,9 @@
-import Main from '@/components/Main/Main'
+import Main from '@/components/Main/Main';
+
 export default function main() {
   return (
-    <>
-      <Main/>
-    </>
+    <div className="w-full flex flex-col">
+      <Main />
+    </div>
   );
 }
