@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import useSWR from 'swr';
 import Link from 'next/link';
-import { getMyGPAPI } from '@/api/gp';
+import { getMyGPAPI } from '@/apis/gp';
 
 export function CharCard() {
   const { data = { gp: 0 } } = useSWR('GP', getMyGPAPI);

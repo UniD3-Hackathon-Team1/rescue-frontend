@@ -1,4 +1,4 @@
-import { axios } from './common';
+import { axios } from '@/apis/common';
 
 export const getGPRanking = async (type: 'group' | 'individual') => {
   const res = await axios.get<{ name: string, gp: number }[]>(`/api/gp/rank/${type}`);

@@ -8,7 +8,7 @@ import Image from 'next/image';
 import classes from './RegionalComponent.module.css';
 import region from './src/region1.png';
 import useSWR from 'swr';
-import { getGPRanking } from '@/api/gp';
+import { getGPRanking } from '@/apis/gp';
 
 // const data = [
 //     {

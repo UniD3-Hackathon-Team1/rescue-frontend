@@ -7,7 +7,7 @@ import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import classes from './Login.module.css';
 import { Frame } from '../Frame';
-import { login } from '@/api/user';
+import { login } from '@/apis/user';
 
 export function LoginComponent() {
     const timeoutRef = useRef<number>(-1);
