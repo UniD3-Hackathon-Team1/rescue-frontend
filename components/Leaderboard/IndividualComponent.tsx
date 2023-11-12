@@ -23,7 +23,7 @@ export function IndividualComponent() {
 
     return (
         <div className={classes.container}><br />
-        <Image src={individual} alt="individual" />
+        <Image src={individual} alt="individual1" />
         <ScrollArea h={300} onScrollPositionChange={({ y }) => setScrolled(y !== 0)}>
         <Table miw={200}>
             <Table.Thead className={cx(classes.header, { [classes.scrolled]: scrolled })}>
