@@ -1,38 +1,20 @@
 import cx from 'clsx';
-import { useState } from 'react';
 import { Table, Checkbox, ScrollArea, rem } from '@mantine/core';
 import classes from './MissionTable.module.css';
 
-interface catData {
-    id: string;
-    context: string;
-    period: string;
-    score: string;
-}
-
-interface MissionTableProps {
-    data: catData[];
-}
-
-export function MissionTable({ data }: MissionTableProps) {
-  const [selection, setSelection] = useState(['1']);
-  const toggleRow = (id: string) =>
-    setSelection((current) =>
-      current.includes(id) ? current.filter((item) => item !== id) : [...current, id]
-    );
-  const toggleAll = () =>
-    setSelection((current) => (current.length === data.length ? [] : data.map((item) => item.id)));
-
+export function MissionTable({ data }: { data: {
+  id: number, name: string, categoryId: number, period: number, gp: number, included: boolean
+}[] }) {
   const rows = data.map((item) => {
-    const selected = selection.includes(item.id);
+    const selected = item.included;
     return (
       <Table.Tr key={item.id} className={cx({ [classes.rowSelected]: selected })}>
         <Table.Td>
-          <Checkbox checked={selection.includes(item.id)} onChange={() => toggleRow(item.id)} />
+          <Checkbox checked={selected} />
         </Table.Td>
-        <Table.Td>{item.context}</Table.Td>
-        <Table.Td>{item.period}</Table.Td>
-        <Table.Td>{item.score}</Table.Td>
+        <Table.Td>{item.name}</Table.Td>
+        <Table.Td>{`${item.period}일`}</Table.Td>
+        <Table.Td>{item.gp}</Table.Td>
       </Table.Tr>
     );
   });
@@ -44,9 +26,8 @@ export function MissionTable({ data }: MissionTableProps) {
           <Table.Tr>
             <Table.Th style={{ width: rem(40) }}>
               <Checkbox
-                onChange={toggleAll}
-                checked={selection.length === data.length}
-                indeterminate={selection.length > 0 && selection.length !== data.length}
+                checked={data.reduce((prev, curr) => !!(prev && curr.included), true)}
+                indeterminate={data.reduce((prev, curr) => !!(prev || curr.included), false)}
               />
             </Table.Th>
             <Table.Th>내용</Table.Th>

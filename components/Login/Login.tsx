@@ -4,6 +4,7 @@
 import { Title, Text, Autocomplete, Loader, PasswordInput, Group, Button } from '@mantine/core';
 import Link from 'next/link';
 import { useState, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import classes from './Login.module.css';
 import { Frame } from '../Frame';
 import { login } from '@/api/user';
@@ -13,6 +14,7 @@ export function LoginComponent() {
     const [value, setValue] = useState('');
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState<string[]>([]);
+    const router = useRouter();
 
     const handleChange = (val: string) => {
     window.clearTimeout(timeoutRef.current);
@@ -44,7 +46,11 @@ export function LoginComponent() {
                 const formData = new FormData(e.target as any);
                 const d = Object.fromEntries(formData) as any;
                 const result = await login(d);
-                console.log(result);
+                if (!result) {
+                    alert('로그인에 실패했습니다.');
+                    return;
+                }
+                router.push('/main');
               }}
             >
                 <Autocomplete

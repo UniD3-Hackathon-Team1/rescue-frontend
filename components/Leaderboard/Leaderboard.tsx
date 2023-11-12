@@ -1,15 +1,16 @@
+/* eslint-disable import/no-named-as-default */
+
 'use client';
 
  // this is a client component
-import { Title, Button, SegmentedControl } from '@mantine/core';
-import { useRouter } from 'next/navigation';
+import { Title, SegmentedControl } from '@mantine/core';
 import { useState } from 'react';
 import classes from './Leaderboard.module.css';
 import { RegionalComponent } from './RegionalComponent';
 import { IndividualComponent } from './IndividualComponent';
+import Frame from '../Frame';
 
 export function LeaderboardComponent() {
-    const router = useRouter();
     const [selectedOption, setSelectedOption] = useState('지역별');
 
     const handleOptionChange = (value: string) => {
@@ -23,8 +24,8 @@ export function LeaderboardComponent() {
             return <IndividualComponent />;
     };
     return (
-        <div className={classes.container}>
-        <Title className={classes.title} ta="center" mt={100} />
+        <Frame>
+        <Title className={classes.title} ta="center" />
         <SegmentedControl
           radius="xl"
           size="md"
@@ -34,6 +35,6 @@ export function LeaderboardComponent() {
           onChange={handleOptionChange}
         />
         {renderContent()}
-        </div>
+        </Frame>
     );
 }

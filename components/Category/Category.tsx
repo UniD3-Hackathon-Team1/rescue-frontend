@@ -3,7 +3,6 @@
  // this is a client component
 import { Button } from '@mantine/core';
 import { useRouter } from 'next/navigation';
-import classes from './Category.module.css';
 import { Frame } from '../Frame';
 
 export function CategoryComponent() {
@@ -11,7 +10,16 @@ export function CategoryComponent() {
 
     return (
         <Frame>
-            <>
+            <form
+              className="w-full flex flex-col items-center gap-4"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const formData = new FormData(e.target as any);
+                const d = Object.fromEntries(formData) as any;
+                const str = Object.keys(d).map(t => `selected=${t}`).join('&');
+                router.push(`/missionpool?${str}`);
+            }}
+            >
                 <div className="inline-flex gap-2 items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -22,9 +30,9 @@ export function CategoryComponent() {
                     <span className="font-bold text-2xl">가정 안전</span>
                 </div>
                 <div className="flex flex-col gap-2 w-full max-w-[400px] mb-8">
-                    <button type="button" className="btn btn-lg w-full bg-white border border-gray-300">화재·전기</button>
-                    <button type="button" className="btn btn-lg w-full bg-white border border-gray-300">어린이·노약자</button>
-                    <button type="button" className="btn btn-lg w-full bg-white border border-gray-300">주방·식품</button>
+                    <input type="checkbox" aria-label="화재·전기" className="btn btn-lg w-full bg-white border border-gray-300" name="1" />
+                    <input type="checkbox" aria-label="어린이·노약자" className="btn btn-lg w-full bg-white border border-gray-300" name="2" />
+                    <input type="checkbox" aria-label="주방·식품" className="btn btn-lg w-full bg-white border border-gray-300" name="3" />
                 </div>
                 <div className="inline-flex gap-2 items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -35,9 +43,9 @@ export function CategoryComponent() {
                     <span className="font-bold text-2xl">개인 안전</span>
                 </div>
                 <div className="flex flex-col gap-2 w-full max-w-[400px] mb-8">
-                    <button type="button" className="btn btn-lg w-full bg-white border border-gray-300">비상 대비</button>
-                    <button type="button" className="btn btn-lg w-full bg-white border border-gray-300">위생·건강</button>
-                    <button type="button" className="btn btn-lg w-full bg-white border border-gray-300">디지털 보안</button>
+                    <input type="checkbox" aria-label="비상 대비" className="btn btn-lg w-full bg-white border border-gray-300" name="4" />
+                    <input type="checkbox" aria-label="위생·건강" className="btn btn-lg w-full bg-white border border-gray-300" name="5" />
+                    <input type="checkbox" aria-label="디지털 보안" className="btn btn-lg w-full bg-white border border-gray-300" name="6" />
                 </div>
                 <div className="inline-flex gap-2 items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-run" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -50,9 +58,9 @@ export function CategoryComponent() {
                     <span className="font-bold text-2xl">외부 활동 안전</span>
                 </div>
                 <div className="flex flex-col gap-2 w-full max-w-[400px] mb-8">
-                    <button type="button" className="btn btn-lg w-full bg-white border border-gray-300">교통·차량</button>
-                    <button type="button" className="btn btn-lg w-full bg-white border border-gray-300">여가</button>
-                    <button type="button" className="btn btn-lg w-full bg-white border border-gray-300">여행</button>
+                    <input type="checkbox" aria-label="교통·차량" className="btn btn-lg w-full bg-white border border-gray-300" name="7" />
+                    <input type="checkbox" aria-label="여가" className="btn btn-lg w-full bg-white border border-gray-300" name="8" />
+                    <input type="checkbox" aria-label="여행" className="btn btn-lg w-full bg-white border border-gray-300" name="9" />
                 </div>
                 <div className="inline-flex gap-2 items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-briefcase" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -65,15 +73,15 @@ export function CategoryComponent() {
                     <span className="font-bold text-2xl">직장 안전</span>
                 </div>
                 <div className="flex flex-col gap-2 w-full max-w-[400px] mb-8">
-                    <button type="button" className="btn btn-lg w-full bg-white border border-gray-300">작업환경</button>
-                    <button type="button" className="btn btn-lg w-full bg-white border border-gray-300">정신건강</button>
-                    <button type="button" className="btn btn-lg w-full bg-white border border-gray-300">비상상황</button>
-                    <button type="button" className="btn btn-lg w-full bg-white border border-gray-300">법적·규정</button>
+                    <input type="checkbox" aria-label="작업환경" className="btn btn-lg w-full bg-white border border-gray-300" name="10" />
+                    <input type="checkbox" aria-label="정신건강" className="btn btn-lg w-full bg-white border border-gray-300" name="11" />
+                    <input type="checkbox" aria-label="비상상황" className="btn btn-lg w-full bg-white border border-gray-300" name="12" />
+                    <input type="checkbox" aria-label="법적·규정" className="btn btn-lg w-full bg-white border border-gray-300" name="13" />
                 </div>
-            <Button onClick={function () { router.push('../missionpool'); }} className={classes.button}>
-                다음
-            </Button>
-            </>
+                <Button type="submit">
+                    다음
+                </Button>
+            </form>
         </Frame>
     );
 }

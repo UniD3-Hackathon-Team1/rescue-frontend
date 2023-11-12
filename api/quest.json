@@ -1,0 +1,434 @@
+{
+  "1": {
+    "id": 1,
+    "name": "소화기, 비상등, 비상손전등 상태 확인",
+    "categoryId": 1,
+    "period": 30,
+    "gp": 50,
+    "included": true
+  },
+  "2": {
+    "id": 2,
+    "name": "소화기 사용법 숙지 및 위치 확인",
+    "categoryId": 1,
+    "period": 30,
+    "gp": 50,
+    "included": true
+  },
+  "3": {
+    "id": 3,
+    "name": "전기 콘센트 주변 정리 및 먼지 청소",
+    "categoryId": 1,
+    "period": 7,
+    "gp": 20,
+    "included": true
+  },
+  "4": {
+    "id": 4,
+    "name": "가전 제품 및 충전기 정상 작동 여부 점검",
+    "categoryId": 1,
+    "period": 30,
+    "gp": 50,
+    "included": true
+  },
+  "5": {
+    "id": 5,
+    "name": "화재 대피 계획 수립 및 연습",
+    "categoryId": 1,
+    "period": 365,
+    "gp": 100,
+    "included": true
+  },
+  "6": {
+    "id": 6,
+    "name": "어린이/노약자 보호 장비 설치 및 점검",
+    "categoryId": 2,
+    "period": 7,
+    "gp": 20,
+    "included": true
+  },
+  "7": {
+    "id": 7,
+    "name": "위험 물품 보관 확인",
+    "categoryId": 2,
+    "period": 30,
+    "gp": 50,
+    "included": true
+  },
+  "8": {
+    "id": 8,
+    "name": "가정 내 낙상 방지 대책 마련",
+    "categoryId": 2,
+    "period": 30,
+    "gp": 50,
+    "included": true
+  },
+  "9": {
+    "id": 9,
+    "name": "응급 상황 대비 연락처 준비",
+    "categoryId": 2,
+    "period": 365,
+    "gp": 100,
+    "included": true
+  },
+  "10": {
+    "id": 10,
+    "name": "응급 처치 키트 점검 및 준비",
+    "categoryId": 2,
+    "period": 30,
+    "gp": 50,
+    "included": true
+  },
+  "11": {
+    "id": 11,
+    "name": "날카로운 도구 안전 보관",
+    "categoryId": 3,
+    "period": 1,
+    "gp": 5,
+    "included": true
+  },
+  "12": {
+    "id": 12,
+    "name": "화재 예방 점검",
+    "categoryId": 3,
+    "period": 1,
+    "gp": 5,
+    "included": true
+  },
+  "13": {
+    "id": 13,
+    "name": "유통 기한 확인 및 정리",
+    "categoryId": 3,
+    "period": 7,
+    "gp": 20,
+    "included": true
+  },
+  "14": {
+    "id": 14,
+    "name": "주방 청결 유지",
+    "categoryId": 3,
+    "period": 1,
+    "gp": 5,
+    "included": true
+  },
+  "15": {
+    "id": 15,
+    "name": "기본 자기 방어(호신술) 기술 학습",
+    "categoryId": 4,
+    "period": 7,
+    "gp": 20,
+    "included": true
+  },
+  "16": {
+    "id": 16,
+    "name": "호신 용품 휴대",
+    "categoryId": 4,
+    "period": 1,
+    "gp": 5,
+    "included": true
+  },
+  "17": {
+    "id": 17,
+    "name": "비상 상황 시 대피 루트 및 비상 연락망 숙지",
+    "categoryId": 4,
+    "period": 365,
+    "gp": 100,
+    "included": true
+  },
+  "18": {
+    "id": 18,
+    "name": "개인 비상용 키트(호루라기, 손전등, 소형 약품) 구비",
+    "categoryId": 4,
+    "period": 365,
+    "gp": 100,
+    "included": true
+  },
+  "19": {
+    "id": 19,
+    "name": "외출 후, 식사 전 후로 손 씻기",
+    "categoryId": 5,
+    "period": 1,
+    "gp": 5,
+    "included": true
+  },
+  "20": {
+    "id": 20,
+    "name": "적정 수분 섭취",
+    "categoryId": 5,
+    "period": 1,
+    "gp": 5,
+    "included": true
+  },
+  "21": {
+    "id": 21,
+    "name": "규칙 적인 운동하기",
+    "categoryId": 5,
+    "period": 1,
+    "gp": 5,
+    "included": true
+  },
+  "22": {
+    "id": 22,
+    "name": "충분한 수면 취하기",
+    "categoryId": 5,
+    "period": 1,
+    "gp": 5,
+    "included": true
+  },
+  "23": {
+    "id": 23,
+    "name": "스트레스 관리하기",
+    "categoryId": 5,
+    "period": 7,
+    "gp": 20,
+    "included": true
+  },
+  "24": {
+    "id": 24,
+    "name": "건강 검진 및 필요한 예방 접종 받기",
+    "categoryId": 5,
+    "period": 365,
+    "gp": 100,
+    "included": true
+  },
+  "25": {
+    "id": 25,
+    "name": "비밀번호 주기적인 변경",
+    "categoryId": 6,
+    "period": 365,
+    "gp": 100,
+    "included": true
+  },
+  "26": {
+    "id": 26,
+    "name": "피싱 및 사기 이메일 인식 및 대처법 숙지",
+    "categoryId": 6,
+    "period": 365,
+    "gp": 100,
+    "included": true
+  },
+  "27": {
+    "id": 27,
+    "name": "중요한 개인 정보의 안전한 저장 및 관리",
+    "categoryId": 6,
+    "period": 30,
+    "gp": 50,
+    "included": true
+  },
+  "28": {
+    "id": 28,
+    "name": "정기적인 차량 점검 및 유지 보수",
+    "categoryId": 7,
+    "period": 30,
+    "gp": 50,
+    "included": true
+  },
+  "29": {
+    "id": 29,
+    "name": "보행 중 휴대폰 사용 자제 후 주변 환경에 주의 집중하기",
+    "categoryId": 7,
+    "period": 1,
+    "gp": 5,
+    "included": true
+  },
+  "30": {
+    "id": 30,
+    "name": "야간 보행시 반사성 액세서리 착용하기",
+    "categoryId": 7,
+    "period": 1,
+    "gp": 5,
+    "included": true
+  },
+  "31": {
+    "id": 31,
+    "name": "정속 주행 등 안전 운전하기",
+    "categoryId": 7,
+    "period": 1,
+    "gp": 5,
+    "included": true
+  },
+  "32": {
+    "id": 32,
+    "name": "야외 활동 시 적절한 안전 장비 사용",
+    "categoryId": 8,
+    "period": 7,
+    "gp": 20,
+    "included": true
+  },
+  "33": {
+    "id": 33,
+    "name": "날씨 및 경로 사전 점검 하기",
+    "categoryId": 8,
+    "period": 30,
+    "gp": 50,
+    "included": true
+  },
+  "34": {
+    "id": 34,
+    "name": "공원, 캠핑장 등에서 야생동물 대처법 숙지",
+    "categoryId": 8,
+    "period": 365,
+    "gp": 100,
+    "included": true
+  },
+  "35": {
+    "id": 35,
+    "name": "여행지 정보 조사하기",
+    "categoryId": 9,
+    "period": 365,
+    "gp": 100,
+    "included": true
+  },
+  "36": {
+    "id": 36,
+    "name": "여행 보험 가입하기",
+    "categoryId": 9,
+    "period": 365,
+    "gp": 100,
+    "included": true
+  },
+  "37": {
+    "id": 37,
+    "name": "긴급 연락처 및 대사관 정보 저장하기",
+    "categoryId": 9,
+    "period": 365,
+    "gp": 100,
+    "included": true
+  },
+  "38": {
+    "id": 38,
+    "name": "여행 중 위생 및 건강 유지 주의사항 숙지",
+    "categoryId": 9,
+    "period": 365,
+    "gp": 100,
+    "included": true
+  },
+  "39": {
+    "id": 39,
+    "name": "도로 및 보도 상태 신고하기",
+    "categoryId": 10,
+    "period": 30,
+    "gp": 50,
+    "included": true
+  },
+  "40": {
+    "id": 40,
+    "name": "공공 시설물 안전 점검하기",
+    "categoryId": 10,
+    "period": 30,
+    "gp": 50,
+    "included": true
+  },
+  "41": {
+    "id": 41,
+    "name": "자연 재해 비상 대피 계획 수립 및 연습하기",
+    "categoryId": 10,
+    "period": 365,
+    "gp": 100,
+    "included": true
+  },
+  "42": {
+    "id": 42,
+    "name": "공공 위생 상태 개선 하기",
+    "categoryId": 10,
+    "period": 7,
+    "gp": 20,
+    "included": true
+  },
+  "43": {
+    "id": 43,
+    "name": "사무실 또는 작업장 정리 정돈 및 청결 유지",
+    "categoryId": 11,
+    "period": 1,
+    "gp": 5,
+    "included": true
+  },
+  "44": {
+    "id": 44,
+    "name": "전기 안전 점검 하기",
+    "categoryId": 11,
+    "period": 7,
+    "gp": 20,
+    "included": true
+  },
+  "45": {
+    "id": 45,
+    "name": "비상 대피 경로 확인하기",
+    "categoryId": 11,
+    "period": 365,
+    "gp": 100,
+    "included": true
+  },
+  "46": {
+    "id": 46,
+    "name": "소화기 및 비상 물품 확인 하기",
+    "categoryId": 11,
+    "period": 30,
+    "gp": 50,
+    "included": true
+  },
+  "47": {
+    "id": 47,
+    "name": "응급 처치 교육하기",
+    "categoryId": 11,
+    "period": 365,
+    "gp": 30,
+    "included": true
+  },
+  "48": {
+    "id": 48,
+    "name": "긍정적인 생각 기록하기",
+    "categoryId": 12,
+    "period": 1,
+    "gp": 5,
+    "included": true
+  },
+  "49": {
+    "id": 49,
+    "name": "명상 및 요가 실천하기",
+    "categoryId": 12,
+    "period": 7,
+    "gp": 20,
+    "included": true
+  },
+  "50": {
+    "id": 50,
+    "name": "일과 중 짧은 휴식 시간 갖기",
+    "categoryId": 12,
+    "period": 1,
+    "gp": 5,
+    "included": true
+  },
+  "51": {
+    "id": 51,
+    "name": "동료와의 긍정적인 소통하기",
+    "categoryId": 12,
+    "period": 7,
+    "gp": 20,
+    "included": true
+  },
+  "52": {
+    "id": 52,
+    "name": "온라인 규정 준수 교육 완료하기",
+    "categoryId": 13,
+    "period": 365,
+    "gp": 100,
+    "included": true
+  },
+  "53": {
+    "id": 53,
+    "name": "작업장 위험 평가 참여하기",
+    "categoryId": 13,
+    "period": 30,
+    "gp": 50,
+    "included": true
+  },
+  "54": {
+    "id": 54,
+    "name": "최신 법률 및 규정 정보 업데이트 받기",
+    "categoryId": 13,
+    "period": 365,
+    "gp": 100,
+    "included": true
+  }
+}

@@ -1,45 +1,29 @@
-"use client"; // this is a client component
-import classes from './RegionalComponent.module.css';
-import {useState} from 'react';
+'use client';
+
+ // this is a client component
+import { useState } from 'react';
 import cx from 'clsx';
 import { Table, ScrollArea } from '@mantine/core';
-import individual from './src/individual.png';
 import Image from 'next/image';
-
-const data = [
-    {
-        rank: '1',
-        name: '김사람',
-        score: '6200',
-    },
-    {
-        rank: '2',
-        name: '이사람',
-        score: '6100',
-    },
-    {
-        rank: '3',
-        name: '박사람',
-        score: '6000',
-    }
-  ];
-
-type SegmentOption = "지역별" | "개인별";
+import useSWR from 'swr';
+import individual from './src/individual.png';
+import { getGPRanking } from '@/api/gp';
+import classes from './RegionalComponent.module.css';
 
 export function IndividualComponent() {
-
     const [scrolled, setScrolled] = useState(false);
+    const { data } = useSWR('individual', getGPRanking);
 
-    const rows = data.map((row) => (
-        <Table.Tr key={row.rank}>
+    const rows = data?.map((row) => (
+        <Table.Tr key={row.name}>
         <Table.Td>{row.name}</Table.Td>
-        <Table.Td>{row.score}</Table.Td>
+        <Table.Td>{row.gp}</Table.Td>
         </Table.Tr>
     ));
 
     return (
-        <div className={classes.container}><br/>
-        <Image src={individual} alt="individual"/>
+        <div className={classes.container}><br />
+        <Image src={individual} alt="individual" />
         <ScrollArea h={300} onScrollPositionChange={({ y }) => setScrolled(y !== 0)}>
         <Table miw={200}>
             <Table.Thead className={cx(classes.header, { [classes.scrolled]: scrolled })}>

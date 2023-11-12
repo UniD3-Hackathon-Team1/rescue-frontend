@@ -2,6 +2,7 @@
 
  // this is a client component
 import React, { useState } from 'react';
+import useSWR from 'swr';
 import { useRouter } from 'next/navigation';
 import { Button } from '@mantine/core';
 import { MissionPoolComponent1 } from '../../components/MissionPool/MissionPool1';
@@ -10,20 +11,23 @@ import { MissionPoolComponent3 } from '../../components/MissionPool/MissionPool3
 import { MissionPoolComponent4 } from '../../components/MissionPool/MissionPool4';
 import Topper from '@/components/Main/Topper';
 import { Frame } from '@/components/Frame';
+import { getAllQuestAPI } from '@/api/quest';
 
 export default function Category() {
     const router = useRouter();
     const [activeTable, setActiveTable] = useState(1);
+    const { data = [] } = useSWR('allQuest', getAllQuestAPI);
+    // console.log({data});
     const renderActiveTable = () => {
         switch (activeTable) {
             case 1:
-                return <MissionPoolComponent1 />;
+                return <MissionPoolComponent1 data={data} />;
             case 2:
-                return <MissionPoolComponent2 />;
+                return <MissionPoolComponent2 data={data} />;
             case 3:
-                return <MissionPoolComponent3 />;
+                return <MissionPoolComponent3 data={data} />;
             case 4:
-                return <MissionPoolComponent4 />;
+                return <MissionPoolComponent4 data={data} />;
             default:
                 return null;
         }

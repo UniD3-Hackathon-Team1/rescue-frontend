@@ -1,8 +1,13 @@
+'use client';
+
 import Image from 'next/image';
+import useSWR from 'swr';
 import Link from 'next/link';
-import { Group } from '@mantine/core';
+import { getMyGPAPI } from '@/api/gp';
 
 export function CharCard() {
+  const { data = { gp: 0 } } = useSWR('GP', getMyGPAPI);
+  console.log(data);
   // const { title, description, country, badges } = mockdata;
   // const features = badges.map((badge) => (
   //   <Badge variant="light" key={badge.label} leftSection={badge.emoji}>
@@ -43,9 +48,25 @@ export function CharCard() {
     //     <button className="btn btn-primary" type="button">캐릭터 설정</button>
     //   </Group>
     // </Card>
-    <div className="card card-compact w-full bg-base-100 border-gray-300 border rounded-lg">
-      <figure className=" relative w-full aspect-square"><Image src="/smallCharacter.png" alt="Shoes" objectFit="cover" layout="fill" /></figure>
-      <div className="card-body">
+    <div className="card card-compact w-full bg-base-100 border-gray-300 border rounded-lg aspect-square relative flex justify-center items-center">
+      <figure className=" relative w-1/2 aspect-square"><Image src="/Character.png" alt="Shoes" objectFit="cover" layout="fill" /></figure>
+      <div className="absolute top-0 left-0 w-full flex flex-row justify-between pt-4 px-4">
+        <div>
+          <div className="text-gray-500 font-bold text-2xl italic">GP</div>
+          <div className="font-bold text-5xl italic">{data.gp}</div>
+        </div>
+        <Link href="/share">
+          <button className="btn rounded-full w-12 h-12 p-0" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-share-2" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M8 9h-1a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-8a2 2 0 0 0 -2 -2h-1" />
+              <path d="M12 14v-11" />
+              <path d="M9 6l3 -3l3 3" />
+            </svg>
+          </button>
+        </Link>
+      </div>
+      {/* <div className="card-body">
         <h2 className="card-title">김사람님 환영합니다!</h2>
         <p>22세, 학생, 서울시 용산구, </p>
         <div className="card-actions justify-end">
@@ -54,7 +75,7 @@ export function CharCard() {
             <Link href="/share"><Image src="/share.png" alt="Shoes" width={50} height={50} /></Link>
           </Group>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
