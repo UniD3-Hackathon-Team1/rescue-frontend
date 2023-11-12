@@ -5,12 +5,12 @@ export function Char() {
   return (
     <Center w="100vw" mt={20}>
       <div className="w-full max-w-[520px] px-3 gap-8 flex flex-col items-center">
-        <div className="w-full border border-gray-300 rounded-lg divide-y mt-4 overflow-hidden">
+        <div className="w-full border border-gray-300 rounded-lg divide-y mt-4 overflow-hidden flex items-center flex-col">
           <div className="w-full h-14 text-2xl flex items-center justify-center font-bold bg-primary text-white">
             캐릭터 커스터마이징
           </div>
-          <div className="w-full aspect-[3/4] relative">
-            <Image src="/smallCharacter.png" alt="캐릭터" objectFit="contain" fill />
+          <div className="w-3/5 aspect-[3/4] relative">
+            <Image src="/Character.png" alt="캐릭터" objectFit="contain" fill />
           </div>
           <div className="w-full py-3 flex items-center justify-center">
             <div className="join">

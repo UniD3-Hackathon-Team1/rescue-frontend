@@ -5,88 +5,9 @@ import { Text } from '@mantine/core';
 import classes from './MissionPool.module.css';
 import { MissionTable } from './MissionTable';
 
-const data1 = [
-    {
-        id: '1',
-        context: '사무실 또는 작업장 정리 정돈 및 청결 유지',
-        period: '매일',
-        score: '20',
-    },
-    {
-        id: '2',
-        context: '전기 안전 점검 하기',
-        period: '일주일',
-        score: '20',
-    },
-    {
-        id: '3',
-        context: '비상 대피 경로 확인하기',
-        period: '1년',
-        score: '20',
-    },
-    {
-        id: '4',
-        context: '소화기 및 비상 물품 확인하기',
-        period: '1달',
-        score: '20',
-    },
-    {
-        id: '5',
-        context: '응급 처치 교육하기',
-        period: '1년',
-        score: '20',
-    },
-];
-
-const data2 = [
-    {
-        id: '1',
-        context: '긍정적인 생각 기록하기',
-        period: '매일',
-        score: '20',
-    },
-    {
-        id: '2',
-        context: '명상 및 요가 실천하기',
-        period: '일주일',
-        score: '20',
-    },
-    {
-        id: '3',
-        context: '일과 중 짧은 휴식 시간 갖기',
-        period: '매일',
-        score: '20',
-    },
-    {
-        id: '4',
-        context: '동료와의 긍정적인 소통하기',
-        period: '일주일',
-        score: '20',
-    },
-];
-
-const data3 = [
-    {
-        id: '1',
-        context: '온라인 규정 준수 교육 완료하기',
-        period: '1년',
-        score: '20',
-    },
-    {
-        id: '1',
-        context: '작업장 위험 평가 참여하기',
-        period: '1달',
-        score: '20',
-    },
-    {
-        id: '1',
-        context: '최신 법률 및 규정 정보 업데이트 받기',
-        period: '1년',
-        score: '20',
-    },
-];
-
-export function MissionPoolComponent4() {
+export function MissionPoolComponent4({ data }: { data: {
+    id: number, name: string, categoryId: number, period: number, gp: number, included: boolean
+  }[] }) {
     return (
         <>
         <Text className={classes.subtitle1}>직장 안전</Text>
@@ -98,7 +19,7 @@ export function MissionPoolComponent4() {
             </svg>
             작업 환경 안전
         </Text>
-        <MissionTable data={data1} />
+        <MissionTable data={data.filter((t) => t.categoryId === 11)} />
         <Text className={classes.subtitle2}>
             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-mood-nervous" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -109,7 +30,7 @@ export function MissionPoolComponent4() {
             </svg>
             정신 건강 및 스트레스 관리
         </Text>
-        <MissionTable data={data2} />
+        <MissionTable data={data.filter((t) => t.categoryId === 12)} />
         <Text className={classes.subtitle2}>
             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-gavel" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -121,7 +42,7 @@ export function MissionPoolComponent4() {
             </svg>
             법적 및 규정 준수
         </Text>
-        <MissionTable data={data3} />
+        <MissionTable data={data.filter((t) => t.categoryId === 13)} />
         </>
     );
 }

@@ -56,7 +56,7 @@ const footerLink = [
 export function Footer() {
   return (
     <div className="w-screen flex justify-center items-center mt-5 pb-20">
-      <div className="w-full max-w-[520px] px-3">
+      <div className="w-full max-w-[520px] px-3 flex flex-col gap-3 items-center">
         <div className="w-full border border-gray-300 rounded-lg divide-x flex flex-row mt-10">
           {
             footerLink.map((t) => (
@@ -71,6 +71,7 @@ export function Footer() {
             ))
           }
         </div>
+        <Link href="/">로그아웃</Link>
       </div>
     </div>
   );
