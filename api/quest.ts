@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { axios } from './common';
-import questData from '@/api/quest.json';
+import questData from '@/api/questInfo.json';
 
 export const getEachDayQuestAPI = async (date: string) => {
   const res = await axios.get<any[]>(`/api/record/date/${date}`);

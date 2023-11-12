@@ -29,7 +29,7 @@ function EachQuest({ info, onAdd }: {
  );
 }
 
-export function AddQuestAccor() {
+function AddQuestAccor() {
  const { data = [], mutate } = useSWR('pool', getPoolQuestAPI);
  console.log(data);
  const onAdd = async (id: number) => {
