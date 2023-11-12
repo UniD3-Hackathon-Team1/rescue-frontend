@@ -11,7 +11,7 @@ import { MissionPoolComponent3 } from '../../components/MissionPool/MissionPool3
 import { MissionPoolComponent4 } from '../../components/MissionPool/MissionPool4';
 import Topper from '@/components/Main/Topper';
 import { Frame } from '@/components/Frame';
-import { getAllQuestAPI } from '@/api/quest';
+import { getAllQuestAPI } from '@/apis/quest';
 
 export default function Category() {
     const router = useRouter();

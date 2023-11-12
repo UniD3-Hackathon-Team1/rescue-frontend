@@ -7,7 +7,7 @@ import { Table, ScrollArea } from '@mantine/core';
 import Image from 'next/image';
 import useSWR from 'swr';
 import individual from './src/individual.png';
-import { getGPRanking } from '@/api/gp';
+import { getGPRanking } from '@/apis/gp';
 import classes from './RegionalComponent.module.css';
 
 export function IndividualComponent() {

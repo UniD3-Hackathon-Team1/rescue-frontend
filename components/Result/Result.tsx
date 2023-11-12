@@ -8,8 +8,8 @@ import { useEffect, useState } from 'react';
 import useSWR from 'swr';
 
 import Link from 'next/link';
-import { deleteQuestAPI, finishQuestAPI, getEachDayQuestAPI, getMonthQuestAPI } from '@/api/quest';
-import { dateToString } from '@/api/util';
+import { deleteQuestAPI, finishQuestAPI, getEachDayQuestAPI, getMonthQuestAPI } from '@/apis/quest';
+import { dateToString } from '@/apis/util';
 
 export const isSameDate = (a: Date, b: Date) => (
     a.getDate() === b.getDate() &&

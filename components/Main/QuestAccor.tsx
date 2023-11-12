@@ -5,8 +5,8 @@
 import React from 'react';
 import useSWR from 'swr';
 import Link from 'next/link';
-import { deleteQuestAPI, finishQuestAPI, getEachDayQuestAPI } from '@/api/quest';
-import { dateToString } from '@/api/util';
+import { deleteQuestAPI, finishQuestAPI, getEachDayQuestAPI } from '@/apis/quest';
+import { dateToString } from '@/apis/util';
 
 // const dummyData = [
 //   {
