@@ -6,7 +6,7 @@ import cx from 'clsx';
 import { Table, ScrollArea } from '@mantine/core';
 import Image from 'next/image';
 import useSWR from 'swr';
-import individual from './src/individual.png';
+import individual from './src/individual1.png';
 import { getGPRanking } from '@/api/gp';
 import classes from './RegionalComponent.module.css';
 
@@ -23,7 +23,7 @@ export function IndividualComponent() {
 
     return (
         <div className={classes.container}><br />
-        <Image src={individual} alt="individual" />
+        <Image src={individual} alt="individual1" />
         <ScrollArea h={300} onScrollPositionChange={({ y }) => setScrolled(y !== 0)}>
         <Table miw={200}>
             <Table.Thead className={cx(classes.header, { [classes.scrolled]: scrolled })}>
