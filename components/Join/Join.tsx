@@ -85,7 +85,7 @@ export function JoinComponent() {
                           className="w-full mb-8"
                         />
                     <TextInput placeholder="아이디" autoComplete="nope" className={classes.textInput} size="md" name="username" />
-                    <TextInput name="password" placeholder="비밀번호" autoComplete="nope" className={classes.textInput} size="md" />
+                    <TextInput name="password" type="password" placeholder="비밀번호" autoComplete="nope" className={classes.textInput} size="md" />
                     <Button type="submit" className={classes.button}>
                         다음
                     </Button>
