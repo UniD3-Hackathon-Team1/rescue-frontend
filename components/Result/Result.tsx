@@ -136,7 +136,7 @@ export function Result() {
               dateData?.map((info) => (<EachNowQuest key={info.id} info={{ title: info.name, content: `주기: ${info.period}일 / GP: ${info.realGP}`, id: info.id, isFinish: info.gp !== 0 }} isToday={isSameDate(Selected, new Date())} onDelete={onDelete} onFinish={onFinish} />))
             ) : (
               <div className="w-full py-3 flex items-center justify-center">
-                완료한 퀘스트가 없습니다.
+                퀘스트가 없습니다.
               </div>
             )
           }
