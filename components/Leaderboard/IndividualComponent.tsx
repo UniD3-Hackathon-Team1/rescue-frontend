@@ -6,7 +6,7 @@ import cx from 'clsx';
 import { Table, ScrollArea } from '@mantine/core';
 import Image from 'next/image';
 import useSWR from 'swr';
-import individual from './src/individual.png';
+import individual from './src/individual1.png';
 import { getGPRanking } from '@/apis/gp';
 import classes from './RegionalComponent.module.css';
 
