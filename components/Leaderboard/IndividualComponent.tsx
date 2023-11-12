@@ -15,7 +15,7 @@ export function IndividualComponent() {
     const { data } = useSWR('individual', getGPRanking);
 
     const rows = data?.map((row) => (
-        <Table.Tr key={row.name}>
+        <Table.Tr key={row.name} className="text-center">
         <Table.Td>{row.name}</Table.Td>
         <Table.Td>{row.gp}</Table.Td>
         </Table.Tr>
@@ -28,8 +28,8 @@ export function IndividualComponent() {
         <Table miw={200}>
             <Table.Thead className={cx(classes.header, { [classes.scrolled]: scrolled })}>
                 <Table.Tr>
-                    <Table.Th>닉네임</Table.Th>
-                    <Table.Th>점수</Table.Th>
+                    <Table.Th w="70%" className="!text-center">닉네임</Table.Th>
+                    <Table.Th w="30%" className="!text-center">점수</Table.Th>
                 </Table.Tr>
             </Table.Thead>
             <Table.Tbody>{rows}</Table.Tbody>

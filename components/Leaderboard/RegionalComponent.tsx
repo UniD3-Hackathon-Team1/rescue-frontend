@@ -35,7 +35,7 @@ export function RegionalComponent() {
     const { data } = useSWR('group', getGPRanking);
 
     const rows = data?.map((row) => (
-        <Table.Tr key={row.name}>
+        <Table.Tr key={row.name} className="text-center">
         <Table.Td>{row.name}</Table.Td>
         <Table.Td>{row.gp}</Table.Td>
         </Table.Tr>
@@ -45,11 +45,11 @@ export function RegionalComponent() {
         <div className={classes.container}><br />
         <Image src={region} alt="region" />
         <ScrollArea h={300} onScrollPositionChange={({ y }) => setScrolled(y !== 0)}>
-        <Table miw={200}>
+        <Table miw={200} className="text-center">
             <Table.Thead className={cx(classes.header, { [classes.scrolled]: scrolled })}>
-                <Table.Tr>
-                    <Table.Th>지역</Table.Th>
-                    <Table.Th>점수</Table.Th>
+                <Table.Tr className="!text-center">
+                    <Table.Th w="70%" className="!text-center">지역</Table.Th>
+                    <Table.Th w="30%" className="!text-center">점수</Table.Th>
                 </Table.Tr>
             </Table.Thead>
             <Table.Tbody>{rows}</Table.Tbody>
