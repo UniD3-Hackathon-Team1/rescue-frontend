@@ -1,4 +1,4 @@
-import axios from 'axios';
+import { axios } from '@/apis/common';
 import { setLogin } from './common';
 
 export async function login(data: { username: string, password: string }) {

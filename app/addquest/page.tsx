@@ -4,7 +4,7 @@
 'use client';
 
 import useSWR from 'swr';
-import { addQuestAPI, getPoolQuestAPI } from '@/api/quest';
+import { addQuestAPI, getPoolQuestAPI } from '@/apis/quest';
 import Frame from '@/components/Frame';
 import Topper from '@/components/Main/Topper';
 import Footer from '@/components/Main/Footer';

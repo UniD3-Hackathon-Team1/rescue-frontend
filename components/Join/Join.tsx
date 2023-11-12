@@ -5,7 +5,7 @@ import { Title, Text, Select, Button, TextInput } from '@mantine/core';
 import { useRouter } from 'next/navigation';
 import classes from './Join.module.css';
 import { Frame } from '../Frame';
-import { joinAPI, login } from '@/api/user';
+import { joinAPI, login } from '@/apis/user';
 
 export function JoinComponent() {
     const router = useRouter();
